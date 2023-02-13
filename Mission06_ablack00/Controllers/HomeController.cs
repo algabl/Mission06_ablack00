@@ -31,6 +31,7 @@ namespace Mission06_ablack00.Controllers
             return View();
         }
 
+        // Post MovieForm checks to see if the submission was valid, if so saves it and returns the user to a success screen. If not, it reloads the page and tells the user what is missing.
         [HttpPost]
         public IActionResult MovieForm(Film film)
         {
