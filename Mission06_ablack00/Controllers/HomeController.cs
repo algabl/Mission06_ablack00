@@ -28,7 +28,7 @@ namespace Mission06_ablack00.Controllers
         public IActionResult MovieForm()
         {
             ViewBag.Categories = FilmContext.Categories.ToList();
-            return View();
+            return View(new Film());
         }
 
         // Post MovieForm checks to see if the submission was valid, if so saves it and returns the user to a success screen. If not, it reloads the page and tells the user what is missing.
@@ -43,7 +43,7 @@ namespace Mission06_ablack00.Controllers
                 return RedirectToAction("MovieList");
             }
             ViewBag.Categories = FilmContext.Categories.ToList();
-            return View();
+            return View(new Film());
         }
 
         [HttpGet]
@@ -62,7 +62,7 @@ namespace Mission06_ablack00.Controllers
             ViewBag.Categories = FilmContext.Categories.ToList();
 
             var film = FilmContext.Films.Single(x => x.FilmId == id);
-            return View(film);
+            return View("MovieForm",film);
         }
 
         [HttpPost]
@@ -76,7 +76,7 @@ namespace Mission06_ablack00.Controllers
                 return RedirectToAction("MovieList");
             }
             ViewBag.Categories = FilmContext.Categories.ToList();
-            return View(film);
+            return View("MovieForm",film);
         }
 
         [HttpGet]

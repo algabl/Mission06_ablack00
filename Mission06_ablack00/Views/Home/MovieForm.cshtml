@@ -1,10 +1,10 @@
 
 
 @{
-    ViewData["Title"] = "Add New Movie";
+    ViewData["Title"] = "Edit Movie";
 }
 @model Film
-<h2>Add New Movie</h2>
+<h2>Edit Movie</h2>
 
 <form method="post">
     
@@ -48,6 +48,7 @@
         <label asp-for="Notes">Notes</label>
         <textarea class="form-control" asp-for="Notes" rows="2" placeholder="Enter notes"></textarea>
     </div>
+    <input type="hidden" asp-for="FilmId"/>
     <div class="form-group">
         <p>* indicates a required field.</p>
     </div>

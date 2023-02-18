@@ -85,4 +85,3 @@
 /Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/e_sqlite3.dll
 /Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/obj/Debug/netcoreapp3.1/Razor/Views/Home/MovieList.cshtml.g.cs
 /Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/obj/Debug/netcoreapp3.1/Razor/Views/Home/Delete.cshtml.g.cs
-/Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/obj/Debug/netcoreapp3.1/Razor/Views/Home/Edit.cshtml.g.cs
