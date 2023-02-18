@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Mission06_ablack00.Models;
 
@@ -11,13 +12,11 @@ namespace Mission06_ablack00.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
         
         private FilmContext FilmContext { get; set; }
 
-        public HomeController(ILogger<HomeController> logger, FilmContext filmyFilm)
+        public HomeController(FilmContext filmyFilm)
         {
-            _logger = logger;
             FilmContext = filmyFilm;
         }
 
@@ -28,6 +27,7 @@ namespace Mission06_ablack00.Controllers
         [HttpGet]
         public IActionResult MovieForm()
         {
+            ViewBag.Categories = FilmContext.Categories.ToList();
             return View();
         }
 
@@ -39,20 +39,66 @@ namespace Mission06_ablack00.Controllers
             {
                 FilmContext.Add(film);
                 FilmContext.SaveChanges();
-                return View("Success", film);
+                TempData["Alert"] = film.Title + " has been successfully added.";
+                return RedirectToAction("MovieList");
             }
+            ViewBag.Categories = FilmContext.Categories.ToList();
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult MovieList()
+        {
+            var films = FilmContext.Films
+                .Include(x => x.Category)
+                .OrderBy(x => x.FilmId)
+                .ToList();
+            return View(films);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            ViewBag.Categories = FilmContext.Categories.ToList();
+
+            var film = FilmContext.Films.Single(x => x.FilmId == id);
+            return View(film);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Film film)
+        {
+            if (ModelState.IsValid)
+            {
+                FilmContext.Update(film);
+                FilmContext.SaveChanges();
+                TempData["Alert"] = film.Title + " has been updated.";
+                return RedirectToAction("MovieList");
+            }
+            ViewBag.Categories = FilmContext.Categories.ToList();
+            return View(film);
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            var film = FilmContext.Films.Single(x => x.FilmId == id);
+            return View(film);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Film film)
+        {
+            film = FilmContext.Films.Single(x => x.FilmId == film.FilmId);
+            TempData["Alert"] = film.Title + " has been deleted.";
+            FilmContext.Films.Remove(film);
+            FilmContext.SaveChanges();
+            return RedirectToAction("MovieList");
         }
         
         public IActionResult Podcasts()
         {
             return View();
-        }
-        
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

@@ -11,7 +11,6 @@
 /Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
 /Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/obj/Debug/netcoreapp3.1/Razor/Views/Home/MovieForm.cshtml.g.cs
 /Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/obj/Debug/netcoreapp3.1/Razor/Views/Home/Podcasts.cshtml.g.cs
-/Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
 /Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
 /Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
 /Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
@@ -84,4 +83,6 @@
 /Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/e_sqlite3.dll
 /Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/e_sqlite3.dll
 /Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/e_sqlite3.dll
-/Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/obj/Debug/netcoreapp3.1/Razor/Views/Home/Success.cshtml.g.cs
+/Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/obj/Debug/netcoreapp3.1/Razor/Views/Home/MovieList.cshtml.g.cs
+/Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/obj/Debug/netcoreapp3.1/Razor/Views/Home/Delete.cshtml.g.cs
+/Users/alexanderblack/RiderProjects/Mission06_ablack00/Mission06_ablack00/obj/Debug/netcoreapp3.1/Razor/Views/Home/Edit.cshtml.g.cs

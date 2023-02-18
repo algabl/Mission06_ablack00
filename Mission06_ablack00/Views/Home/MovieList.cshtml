@@ -1,0 +1,44 @@
+
+
+@{
+    ViewData["Title"] = "The Collection";
+}
+@model List<Film>
+@if (TempData["Alert"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Alert"]
+    </div>
+}
+<table class="table table-bordered table-striped table-hover table-responsive-lg">
+    <thead class="font-weight-bold">
+    <tr>
+        <td>Title</td>
+        <td>Category</td>
+        <td>Rating</td>
+        <td>Edited</td>
+        <td>Lent To</td>
+        <td>Notes</td>
+        <td></td>
+        <td></td>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Title</td>
+                <td>@x.Category.CategoryName</td>
+                <td>@x.Rating</td>
+                <td>@x.Edited</td>
+                <td>@x.LentTo</td>
+                <td>@x.Notes</td>
+                
+                <td><a asp-controller="Home" asp-action="Edit" asp-route-id="@x.FilmId"><i class="fa-solid fa-edit"></i></a></td>
+                <td><a asp-controller="Home" asp-action="Delete" asp-route-id="@x.FilmId"><i class="fa-solid fa-trash"></i></a></td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>
