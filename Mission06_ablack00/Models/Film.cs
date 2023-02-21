@@ -10,6 +10,10 @@ namespace Mission06_ablack00.Models
         
         [Required(ErrorMessage = "You must give the movie a title.")]
         public string Title { get; set; }
+        [Required(ErrorMessage = "You must give the movie a year.")]
+        public int Year { get; set; }
+        [Required(ErrorMessage = "You must give the movie a director.")]
+        public string Director { get; set; }
         [Required(ErrorMessage = "You must give the movie a rating.")]
         public string Rating { get; set; }
         public bool Edited { get; set; }

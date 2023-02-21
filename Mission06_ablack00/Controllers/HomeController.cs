@@ -28,6 +28,7 @@ namespace Mission06_ablack00.Controllers
         public IActionResult MovieForm()
         {
             ViewBag.Categories = FilmContext.Categories.ToList();
+            ViewData["Title"] = "Add Movie";
             return View(new Film());
         }
 
@@ -60,7 +61,7 @@ namespace Mission06_ablack00.Controllers
         public IActionResult Edit(int id)
         {
             ViewBag.Categories = FilmContext.Categories.ToList();
-
+            ViewData["Title"] = "Edit Movie";
             var film = FilmContext.Films.Single(x => x.FilmId == id);
             return View("MovieForm",film);
         }
