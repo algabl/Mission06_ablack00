@@ -117,7 +117,7 @@ namespace Mission06_ablack00.Migrations
                             CategoryId = 3,
                             Edited = false,
                             LentTo = "Robert Parr",
-                            Notes = "Literally the best movie ever",
+                            Notes = "Will make you cry",
                             Rating = "PG",
                             Title = "Inside Out"
                         },

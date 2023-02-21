@@ -91,7 +91,7 @@ namespace Mission06_ablack00.Migrations
             migrationBuilder.InsertData(
                 table: "Films",
                 columns: new[] { "FilmId", "CategoryId", "Edited", "LentTo", "Notes", "Rating", "Title" },
-                values: new object[] { 1, 3, false, "Robert Parr", "Literally the best movie ever", "PG", "Inside Out" });
+                values: new object[] { 1, 3, false, "Robert Parr", "Will make you cry", "PG", "Inside Out" });
 
             migrationBuilder.InsertData(
                 table: "Films",

@@ -71,7 +71,7 @@ namespace Mission06_ablack00.Models
                     Rating = "PG",
                     Edited = false,
                     LentTo = "Robert Parr",
-                    Notes = "Literally the best movie ever"
+                    Notes = "Will make you cry"
                 },
                 new Film
                 {

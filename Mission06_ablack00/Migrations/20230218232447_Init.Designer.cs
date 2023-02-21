@@ -8,7 +8,7 @@ using Mission06_ablack00.Models;
 namespace Mission06_ablack00.Migrations
 {
     [DbContext(typeof(FilmContext))]
-    [Migration("20230218021211_Init")]
+    [Migration("20230218232447_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -119,7 +119,7 @@ namespace Mission06_ablack00.Migrations
                             CategoryId = 3,
                             Edited = false,
                             LentTo = "Robert Parr",
-                            Notes = "Literally the best movie ever",
+                            Notes = "Will make you cry",
                             Rating = "PG",
                             Title = "Inside Out"
                         },
