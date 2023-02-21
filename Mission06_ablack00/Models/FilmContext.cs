@@ -19,16 +19,20 @@ namespace Mission06_ablack00.Models
                     FilmId = 1,
                     Category = "Animation" ,
                     Title = "Inside Out",
+                    Year = 2015,
+                    Director = "Pete Docter",
                     Rating = "PG",
                     Edited = false,
                     LentTo = "Robert Parr",
-                    Notes = "Literally the best movie ever"
+                    Notes = "Will make you cry"
                 },
                 new Film
                 {
                     FilmId = 2,
                     Category = "Murder Mystery",
                     Title = "Knives Out",
+                    Year = 2019,
+                    Director = "Rian Johnson",
                     Rating = "PG-13",
                     Edited = false,
                     LentTo = "Benoit Blanc",
@@ -39,6 +43,8 @@ namespace Mission06_ablack00.Models
                     FilmId = 3,
                     Category = "Comedy",
                     Title = "Zoolander",
+                    Year = 2001,
+                    Director = "Ben Stiller",
                     Rating = "PG-13",
                     Edited = false,
                     LentTo = "Owen Wilson",
