@@ -4,6 +4,13 @@
     ViewData["Title"] = "The Collection";
 }
 @model List<Film>
+
+
+
+@*
+This dynamic alert is used instead of a full "Success" page
+*@
+
 @if (TempData["Alert"] != null)
 {
     <div class="alert alert-success" role="alert">

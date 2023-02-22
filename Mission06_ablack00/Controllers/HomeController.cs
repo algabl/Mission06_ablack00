@@ -27,7 +27,9 @@ namespace Mission06_ablack00.Controllers
         [HttpGet]
         public IActionResult MovieForm()
         {
+            // Ensures categories are populated
             ViewBag.Categories = FilmContext.Categories.ToList();
+            // Dynamically sets the title in the view
             ViewData["Title"] = "Add Movie";
             return View(new Film());
         }
@@ -40,6 +42,7 @@ namespace Mission06_ablack00.Controllers
             {
                 FilmContext.Add(film);
                 FilmContext.SaveChanges();
+                // Uses an alert system that displays on the MovieList view
                 TempData["Alert"] = film.Title + " has been successfully added.";
                 return RedirectToAction("MovieList");
             }
@@ -90,6 +93,8 @@ namespace Mission06_ablack00.Controllers
         [HttpPost]
         public IActionResult Delete(Film film)
         {
+            // In order for the alert to display the name of the deleted film,
+            // the film needs to be repopulated with all of its information based on the id grabbed by the delete form 
             film = FilmContext.Films.Single(x => x.FilmId == film.FilmId);
             TempData["Alert"] = film.Title + " has been deleted.";
             FilmContext.Films.Remove(film);
